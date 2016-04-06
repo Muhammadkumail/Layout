@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+
 import java.util.ArrayList;
 
 public class QouteActivity extends AppCompatActivity {
@@ -21,6 +24,9 @@ public class QouteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
         context=this;
         new get_data().execute();
+        YoYo.with(Techniques.BounceIn)
+                .duration(1000)
+                .playOn(findViewById(R.id.detail_layut));
 
     }
 
